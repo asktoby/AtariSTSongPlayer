@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Start pigpiod daemon if it's not running
-if ! pgrep -x "pigpiod" > /dev/null; then
-    echo "Starting pigpiod daemon..."
-    sudo pigpiod
-fi
-
 # enable the pull-up resistor on GPIO 26
 pigs w 26 1
 
