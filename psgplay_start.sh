@@ -6,6 +6,9 @@ if ! pgrep -x "pigpiod" > /dev/null; then
     sudo pigpiod
 fi
 
+# enable the pull-up resistor on GPIO 26
+pigs w 26 1
+
 # Set GPIO 26 as input with pull-up resistor enabled
 GPIO_PIN=26
 echo "Setting GPIO pin $GPIO_PIN as input with pull-up resistor..."
