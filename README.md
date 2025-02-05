@@ -20,6 +20,8 @@ Extract it to /home/pi/music
 Install pigpio to listen to the GPIO pins
 ```
 sudo apt-get install pigpio
+sudo systemctl enable pigpiod
+sudo systemctl start pigpiod
 ```
 Place psgplay_start.sh from this repo in
 ```
