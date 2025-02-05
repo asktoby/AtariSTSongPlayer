@@ -1,5 +1,5 @@
 # AtariSTSongPlayer
-Endless Atari ST Chip Tune player for install in car.
+Endless Atari ST Chip Tune player for installing on a Raspberry Pi in a car.
 
 Run Raspberry Pi OS on a Pi 3 Model A+.
 
@@ -75,7 +75,11 @@ sudo systemctl disable systemd-journald
 Wire up a switch between GPIO 26 (pin 37) and GND (pin 39) on your Raspberry Pi
 
 Connect the 3.5mm audio jack to your audio system.
+
 Boot the Raspberry Pi
+
 Boot time is around 17 seconds
+
 Tunes should start automatically playing
+
 Close the switch to advance tracks
