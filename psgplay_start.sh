@@ -54,7 +54,7 @@ echo "Number of tracks: $TRACKS"
     echo "Selected track: $TRACK_TO_PLAY"
 
     # Play the selected track in the background
-    ./psgplay/psgplay "$FILE" -t "$TRACK_TO_PLAY" &
+    ./psgplay/psgplay "$FILE" -t "$TRACK_TO_PLAY" --psg-balance=-0.5:0:+0.5 &
     PSG_PID=$!
     echo "psgplay started with PID: $PSG_PID"
 
