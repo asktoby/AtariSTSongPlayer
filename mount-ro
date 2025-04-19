@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo mount -o remount,ro /
+echo "Filesystem is now Read-Only"

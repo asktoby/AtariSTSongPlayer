@@ -23,6 +23,19 @@ sudo apt-get install pigpio
 sudo systemctl enable pigpiod
 sudo systemctl start pigpiod
 ```
+
+Install python if using an LCD display for track names:
+```
+sudo apt-get install python
+```
+Connect a Waveshare LCD1602 LCD display to pins 3, 4, 5, 6 (GPIO 2 I2C1 SDA, 5V power, GPIO 3 I2C SCL, Ground) as per
+https://www.waveshare.com/wiki/LCD1602_I2C_Module_(Blue)
+
+Place Songname.py from this repo in 
+```
+/home/pi/Songname.py
+```
+
 Place psgplay_start.sh from this repo in
 ```
 /home/pi/psgplay_start.sh

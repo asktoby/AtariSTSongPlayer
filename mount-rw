@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo mount -o remount,rw /
+echo "Filesystem is now Read-Write"

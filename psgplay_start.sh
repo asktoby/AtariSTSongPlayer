@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# Start pigpiod daemon if it's not running
+#if ! pgrep -x "pigpiod" > /dev/null; then
+#    echo "Starting pigpiod daemon..."
+#    sudo pigpiod
+#fi
+
 # enable the pull-up resistor on GPIO 26
 pigs w 26 1
+
 
 # Set GPIO 26 as input with pull-up resistor enabled
 GPIO_PIN=26
@@ -39,6 +46,8 @@ while true; do
     # Find a random .sndh file
     FILE=$(find /home/pi/music -type f -name "*.sndh" | shuf -n 1)
     echo "Selected file: $FILE"
+
+python Songname.py "$FILE"
 
 # Get the number of tracks
 TRACKS=$(./psgplay/psgplay "$FILE" -i | grep "##" | awk '{print $4}')
